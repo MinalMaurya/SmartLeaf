@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.LoginActivity">
+
+    <!-- Background Image with Overlay -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/backgroundleaf"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/background_image" />
+
+    <!-- Semi-transparent overlay for better readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55FFFFFF" />
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Logo Section -->
+            <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#E8F5E9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/app_logo" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_back"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.02"
+            app:layout_constraintTop_toBottomOf="@id/cvLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_to_continue"
+            android:textSize="14sp"
+            android:textColor="#546E5B"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.05"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Login Form Card -->
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvLoginForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Email Input -->
+            <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="#4CAF50"
+            app:hintTextColor="#4CAF50"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="#4CAF50"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textColor="#424242"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#4CAF50"
+        app:hintTextColor="#4CAF50"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="#4CAF50"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#4CAF50"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        android:textColor="#424242"
+        android:fontFamily="sans-serif"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Forgot Password Link -->
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textSize="13sp"
+        android:textColor="#4CAF50"
+        android:fontFamily="sans-serif-medium"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Login Button -->
+    <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnLogin"
+    android:layout_width="0dp"
+    android:layout_height="56dp"
+    android:text="@string/login"
+    android:textColor="@android:color/white"
+    android:textSize="16sp"
+    android:fontFamily="sans-serif-medium"
+    android:textAllCaps="false"
+    android:letterSpacing="0.05"
+    app:cornerRadius="12dp"
+    app:backgroundTint="#4CAF50"
+    app:elevation="4dp"
+    app:icon="@drawable/ic_login"
+    app:iconGravity="textStart"
+    app:iconTint="@android:color/white"
+    app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="24dp" />
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:indeterminateTint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/btnLogin"
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="@id/btnLogin"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Sign Up Section -->
+<LinearLayout
+android:id="@+id/llSignup"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center"
+app:layout_constraintTop_toBottomOf="@id/cvLoginForm"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="24dp">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/dont_have_account"
+    android:textSize="14sp"
+    android:textColor="#424242"
+    android:fontFamily="sans-serif" />
+
+<TextView
+    android:id="@+id/tvSignup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/sign_up"
+    android:textSize="14sp"
+    android:textColor="#4CAF50"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif-medium"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    android:padding="4dp"
+    android:layout_marginStart="4dp" />
+
+</LinearLayout>
+
+    <!-- Or Divider -->
+<LinearLayout
+android:id="@+id/llDivider"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center_vertical"
+app:layout_constraintTop_toBottomOf="@id/llSignup"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="24dp">
+
+<View
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_weight="1"
+    android:background="#E0E0E0" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/or_continue_as"
+    android:textSize="12sp"
+    android:textColor="#9E9E9E"
+    android:fontFamily="sans-serif"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp" />
+
+<View
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_weight="1"
+    android:background="#E0E0E0" />
+
+</LinearLayout>
+
+    <!-- Guest Login Button -->
+    <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnGuestLogin"
+    android:layout_width="0dp"
+    android:layout_height="48dp"
+    android:text="@string/continue_as_guest"
+    android:textColor="#4CAF50"
+    android:textSize="14sp"
+    android:fontFamily="sans-serif-medium"
+    android:textAllCaps="false"
+    android:letterSpacing="0.05"
+    app:cornerRadius="12dp"
+    app:strokeColor="#4CAF50"
+    app:strokeWidth="1dp"
+    app:backgroundTint="@android:color/transparent"
+    app:icon="@drawable/ic_guest"
+    app:iconGravity="textStart"
+    app:iconTint="#4CAF50"
+    app:layout_constraintTop_toBottomOf="@id/llDivider"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="2424dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

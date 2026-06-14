@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".ui.activities.ResultActivity">
+
+    <!-- App Bar with Back Button -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#4CAF50"
+            app:title="@string/diagnosis_result"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@android:color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Background Pattern -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/backgroundleaf"
+        android:scaleType="centerCrop"
+        android:alpha="0.08"
+        android:contentDescription="Background Pattern" />
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Image Preview Card with Confidence Badge -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvImagePreview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="2dp"
+                app:strokeColor="#4CAF50"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Scanned Image -->
+                    <ImageView
+                        android:id="@+id/imagePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Scanned Leaf Image"
+                        tools:src="@drawable/veg" />
+
+                    <!-- Gradient Overlay for Badge -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/gradient_overlay" />
+
+                    <!-- Confidence Badge -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:layout_margin="16dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="#4CAF50">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_check"
+                                app:tint="@android:color/white"
+                                android:contentDescription="Confidence Icon" />
+
+                            <TextView
+                                android:id="@+id/tvConfidence"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Confidence: --"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:layout_marginStart="8dp"
+                                tools:text="Confidence: 95%" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Detection Status Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#E8F5E9"
+                app:layout_constraintTop_toBottomOf="@id/cvImagePreview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivStatusIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_info"
+                        app:tint="#4CAF50"
+                        android:contentDescription="Status Icon" />
+
+                    <TextView
+                        android:id="@+id/tvDetectedLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Detected: Healthy Leaf"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginStart="12dp"
+                        tools:text="Detected: Potato Leaf" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Description Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:layout_constraintTop_toBottomOf="@id/cvStatus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Section Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_info"
+                            app:tint="#2196F3"
+                            android:contentDescription="@string/info_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/what_it_means"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E7D32"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginStart="10dp" />
+
+                    </LinearLayout>
+
+                    <!-- Description Text -->
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Analysis results will appear here..."
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="#424242"
+                        android:fontFamily="sans-serif"
+                        tools:text="Leaf appears healthy—no clear disease pattern detected." />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Remedies Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvRemedies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:layout_constraintTop_toBottomOf="@id/cvDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Section Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_info"
+                            app:tint="#FF9800"
+                            android:contentDescription="Remedy Icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/suggested_remedies"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E7D32"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginStart="10dp" />
+
+                    </LinearLayout>
+
+                    <!-- Remedies Text -->
+                    <TextView
+                        android:id="@+id/tvRemedies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recommended actions will appear here..."
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="#424242"
+                        android:fontFamily="sans-serif"
+                        tools:text="• Prune for airflow\n• Mulch; water at soil level\n• Monitor for fungal spots" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- AI Explanation Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAiExplanation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:layout_constraintTop_toBottomOf="@id/cvRemedies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:focusable="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Section Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_description"
+                            app:tint="#673AB7"
+                            android:contentDescription="AI Explanation Icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Explanation"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E7D32"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginStart="10dp" />
+                        <ImageButton
+                            android:id="@+id/btnSpeak"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_speaker"
+                            app:tint="#4CAF50"
+                            android:contentDescription="Speak AI explanation" />
+
+                    </LinearLayout>
+
+                    <!-- AI Explanation Text -->
+                    <TextView
+                        android:id="@+id/tvExplanation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ai_expl_loading"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="#424242"
+                        android:fontFamily="sans-serif"
+                        tools:text="SmartLeaf AI suggests: This looks like early blight. Remove infected leaves, avoid overhead watering, and use copper-based fungicide if needed." />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Buttons (below AI explanation) -->
+            <LinearLayout
+                android:id="@+id/llActions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@id/cvAiExplanation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <!-- Scan Again Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScanAgain"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="@string/scan_again"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    app:backgroundTint="#4CAF50"
+                    app:icon="@drawable/ic_scan"
+                    app:iconGravity="textStart"
+                    app:iconTint="@android:color/white"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Share Results Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="@string/share"
+                    android:textColor="#4CAF50"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="#4CAF50"
+                    app:strokeWidth="1dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:icon="@drawable/ic_share"
+                    app:iconGravity="textStart"
+                    app:iconTint="#4CAF50"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

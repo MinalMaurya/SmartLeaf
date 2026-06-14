@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">SmartLeaf</string>
+
+    <!-- General -->
+    <string name="language">భాష</string>
+    <string name="profile">ప్రొఫైల్</string>
+    <string name="scan_now">ఇప్పుడే స్కాన్ చేయండి</string>
+    <string name="view_categories">వర్గాలను చూడండి</string>
+    <string name="more_options">మరిన్ని ఎంపికలు</string>
+
+    <!-- Messages and Notifications -->
+    <string name="language_changed">భాష మార్చబడింది</string>
+    <string name="save">సేవ్ చేయండి</string>
+    <string name="select_language">భాషను ఎంచుకోండి</string>
+    <string name="settings">సెట్టింగ్‌లు</string>
+    <string name="enable_notifications">నోటిఫికేషన్‌లను ప్రారంభించండి</string>
+    <string name="view_privacy_policy">గోప్యతా విధానాన్ని చూడండి</string>
+    <string name="profile_saved">ప్రొఫైల్ విజయవంతంగా సేవ్ చేయబడింది</string>
+    <string name="my_profile">నా ప్రొఫైల్</string>
+    <string name="account_details">ఖాతా వివరాలు</string>
+    <string name="profile_background">ప్రొఫైల్ నేపథ్యం</string>
+    <string name="user_avatar">వినియోగదారు అవతార్</string>
+    <string name="name_icon">పేరు చిహ్నం</string>
+    <string name="email_icon">ఇమెయిల్ చిహ్నం</string>
+    <string name="phone_icon">ఫోన్ చిహ్నం</string>
+    <string name="language_icon">భాష చిహ్నం</string>
+    <string name="name_label">పేరు</string>
+    <string name="email_label">ఇమెయిల్</string>
+    <string name="phone_label">ఫోన్</string>
+    <string name="preferred_language">ప్రాధాన్య భాష</string>
+    <string name="loading">లోడ్ అవుతోంది...</string>
+    <string name="edit_profile">ప్రొఫైల్‌ను సవరించండి</string>
+    <string name="log_out">లాగ్ అవుట్</string>
+
+    <!-- About Activity -->
+    <string name="background_image">నేపథ్య చిత్రం</string>
+    <string name="app_logo">యాప్ లోగో</string>
+    <string name="app_name_smartleaf">SmartLeaf</string>
+    <string name="tagline">AI-ఆధారిత పంట వ్యాధి గుర్తింపు</string>
+    <string name="about_content_loading">కంటెంట్ లోడ్ అవుతోంది...</string>
+    <string name="developers_icon">డెవలపర్ల చిహ్నం</string>
+    <string name="developed_by">అభివృద్ధి చేసినవారు</string>
+    <string name="developer_icon">డెవలపర్ చిహ్నం</string>
+    <string name="developer_1">ప్రాచీ త్రిపాఠీ</string>
+    <string name="developer_2">మినల్ మౌర్యా</string>
+    <string name="developer_3">సిద్ధి గాయ్కర్</string>
+    <string name="version_icon">వెర్షన్ చిహ్నం</string>
+    <string name="version_1_0">వెర్షన్ 1.0</string>
+    <string name="last_updated">అక్టోబర్ 2025</string>
+
+    <!-- Category Activity -->
+    <string name="crop_categories">పంట వర్గాలు</string>
+    <string name="explore_crops">వివిధ పంటల గురించి తెలుసుకోండి</string>
+    <string name="search_categories">వర్గాలను శోధించండి...</string>
+    <string name="total_categories">8 వర్గాలు</string>
+    <string name="total_categories_format">%d వర్గాలు</string>
+    <string name="no_results">ఫలితాలు లేవు</string>
+    <string name="no_categories_found">వర్గాలు కనుగొనబడలేదు</string>
+    <string name="try_different_search">వేరే శోధన పదాన్ని ప్రయత్నించండి</string>
+
+    <!-- Category Detail -->
+    <string name="category_details">వర్గం వివరాలు</string>
+    <string name="category_image">వర్గం చిత్రం</string>
+    <string name="about_crop">ఈ పంట గురించి</string>
+    <string name="health_comparison">ఆరోగ్య పోలిక</string>
+    <string name="healthy">ఆరోగ్యకరమైన</string>
+    <string name="diseased">వ్యాధిగ్రస్తమైన</string>
+    <string name="healthy_crop">ఆరోగ్యకరమైన పంట</string>
+    <string name="diseased_crop">వ్యాధిగ్రస్తమైన పంట</string>
+    <string name="healthy_image">ఆరోగ్యకరమైన చిత్రం</string>
+    <string name="diseased_image">వ్యాధిగ్రస్తమైన చిత్రం</string>
+    <string name="disease_information">వ్యాధి సమాచారం</string>
+    <string name="info_icon">సమాచార చిహ్నం</string>
+    <string name="compare_icon">పోలిక చిహ్నం</string>
+    <string name="warning_icon">హెచ్చరిక చిహ్నం</string>
+
+    <!-- Diagnose Activity -->
+    <string name="ai_diagnosis">AI నిర్ధారణ</string>
+    <string name="upload_leaf_image">ప్రభావితమైన ఆకు యొక్క స్పష్టమైన చిత్రాన్ని అప్‌లోడ్ చేయండి</string>
+    <string name="select_leaf_image">ఆకు చిత్రాన్ని ఎంచుకోండి</string>
+    <string name="leaf_preview">ఆకు చిత్రం ప్రివ్యూ</string>
+    <string name="upload_placeholder">అప్‌లోడ్ ప్లేస్‌హోల్డర్</string>
+    <string name="no_image_selected">చిత్రం ఏదీ ఎంచుకోలేదు\nచిత్రాన్ని ఎంచుకోవడానికి దిగువ బటన్‌ను నొక్కండి</string>
+    <string name="analyzing">విశ్లేషిస్తోంది...</string>
+    <string name="diagnose_icon">నిర్ధారణ చిహ్నం</string>
+    <string name="result_icon">ఫలితం చిహ్నం</string>
+    <string name="details_icon">వివరాల చిహ్నం</string>
+    <string name="alternatives_icon">ప్రత్యామ్నాయాల చిహ్నం</string>
+
+    <!-- Result Sections -->
+    <string name="diagnosis_result">నిర్ధారణ ఫలితం</string>
+    <string name="detailed_analysis">వివరణాత్మక విశ్లేషణ</string>
+    <string name="alternative_diagnoses">ప్రత్యామ్నాయ నిర్ధారణలు</string>
+    <string name="awaiting_results">విశ్లేషణ తర్వాత ఫలితాలు ఇక్కడ కనిపిస్తాయి</string>
+    <string name="awaiting_details">వివరణాత్మక లక్షణాలు ఇక్కడ జాబితా చేయబడతాయి</string>
+    <string name="awaiting_alternatives">ప్రత్యామ్నాయ నిర్ధారణలు ఇక్కడ కనిపిస్తాయి</string>
+    <string name="confidence_format">విశ్వాసం: %s%%</string>
+    <string name="detected_format">గుర్తించబడింది: %s</string>
+
+    <!-- Error Messages -->
+    <string name="failed_load_image">చిత్రం లోడ్ విఫలమైంది</string>
+    <string name="error_loading_image">చిత్రాన్ని లోడ్ చేయడంలో లోపం: %s</string>
+    <string name="diagnosis_error">నిర్ధారణ లోపం: %s</string>
+    <string name="please_try_again">దయచేసి మరొక చిత్రాన్ని ఎంచుకోండి</string>
+    <string name="no_details_available">వివరణాత్మక విశ్లేషణ అందుబాటులో లేదు</string>
+    <string name="no_alternatives_available">ప్రత్యామ్నాయ నిర్ధారణ అందుబాటులో లేదు</string>
+
+    <!-- History Activity -->
+    <string name="search_history">శోధన చరిత్ర</string>
+    <string name="your_recent_diagnoses">మీ ఇటీవలి మొక్క నిర్ధారణలు</string>
+    <string name="history_icon">చరిత్ర చిహ్నం</string>
+    <string name="recent_items">ఇటీవలి అంశాలు</string>
+    <string name="recent_items_format">%d ఇటీవలి అంశాలు</string>
+    <string name="clear_all">అన్నీ క్లియర్ చేయండి</string>
+    <string name="no_history">చరిత్ర లేదు</string>
+    <string name="no_history_yet">ఇంకా చరిత్ర లేదు</string>
+    <string name="start_diagnosing">చరిత్రను చూడటానికి మొక్కల నిర్ధారణను ప్రారంభించండి</string>
+
+    <!-- History Item -->
+    <string name="history_item_image">చరిత్ర అంశం చిత్రం</string>
+    <string name="time_icon">సమయ చిహ్నం</string>
+    <string name="just_now">ఇప్పుడే</string>
+    <string name="view_details">వివరాలను చూడండి</string>
+    <string name="delete_item">అంశాన్ని తొలగించండి</string>
+
+    <!-- Dialogs -->
+    <string name="delete_item_title">అంశాన్ని తొలగించాలా?</string>
+    <string name="delete_item_message">మీరు ఖచ్చితంగా ఈ అంశాన్ని చరిత్ర నుండి తొలగించాలనుకుంటున్నారా?</string>
+    <string name="clear_all_title">మొత్తం చరిత్రను క్లియర్ చేయాలా?</string>
+    <string name="clear_all_message">మీరు ఖచ్చితంగా మొత్తం చరిత్రను క్లియర్ చేయాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేము.</string>
+    <string name="delete">తొలగించు</string>
+    <string name="cancel">రద్దు చేయండి</string>
+
+    <!-- Login Activity -->
+    <string name="welcome_back">తిరిగి స్వాగతం</string>
+    <string name="login_to_continue">SmartLeaf లో కొనసాగించడానికి లాగిన్ చేయండి</string>
+    <string name="email_address">ఇమెయిల్ చిరునామా</string>
+    <string name="password">పాస్‌వర్డ్</string>
+    <string name="forgot_password">పాస్‌వర్డ్ మర్చిపోయారా?</string>
+    <string name="login">లాగిన్</string>
+    <string name="dont_have_account">ఖాతా లేదా?</string>
+    <string name="sign_up">సైన్ అప్ చేయండి</string>
+    <string name="or_continue_as">లేదా కొనసాగించండి</string>
+    <string name="continue_as_guest">అతిథిగా కొనసాగించండి</string>
+
+    <!-- Validation Messages -->
+    <string name="email_required">ఇమెయిల్ అవసరం</string>
+    <string name="password_required">పాస్‌వర్డ్ అవసరం</string>
+    <string name="invalid_email">చెల్లని ఇమెయిల్ ఫార్మాట్</string>
+    <string name="password_too_short">పాస్‌వర్డ్ కనీసం 6 అక్షరాలు ఉండాలి</string>
+
+    <!-- Success/Error Messages -->
+    <string name="login_successful">లాగిన్ విజయవంతం!</string>
+    <string name="invalid_credentials">చెల్లని ఇమెయిల్ లేదా పాస్‌వర్డ్</string>
+    <string name="login_failed">లాగిన్ విఫలమైంది: %s</string>
+    <string name="network_error">ఇంటర్నెట్ కనెక్షన్ లేదు</string>
+    <string name="connection_timeout">కనెక్షన్ సమయం ముగిసింది. దయచేసి మళ్లీ ప్రయత్నించండి</string>
+    <string name="logged_in_as_guest">అతిథిగా లాగిన్</string>
+    <string name="forgot_password_coming_soon">పాస్‌వర్డ్ మర్చిపోయిన ఫీచర్ త్వరలో వస్తోంది</string>
+
+    <!-- Home Activity -->
+    <string name="welcome_home">SmartLeaf కు స్వాగతం</string>
+    <string name="app_title">SmartLeaf</string>
+    <string name="quick_scan">త్వరిత స్కాన్</string>
+
+
+    <!-- Result Activity -->
+    <string name="scan_again">మళ్లీ స్కాన్ చేయండి</string>
+    <string name="share">షేర్ చేయండి</string>
+    <string name="what_it_means">దీని అర్థం ఏమిటి</string>
+    <string name="suggested_remedies">సూచించిన పరిష్కారాలు</string>
+
+    <!-- SignUp Activity -->
+    <string name="create_account">ఖాతాను సృష్టించండి</string>
+    <string name="sign_up_to_get_started">ప్రారంభించడానికి సైన్ అప్ చేయండి</string>
+    <string name="full_name">పూర్తి పేరు</string>
+    <string name="phone_number">ఫోన్ నంబర్</string>
+    <string name="already_have_account">ఇప్పటికే ఖాతా ఉందా?</string>
+    <string name="log_in">లాగ్ ఇన్ చేయండి</string>
+
+    <string name="feedback">ప్రత్యామ్నాయము</string>
+    <string name="watering_soil_title">💧 నీరు దించడం మరియు మట్టి</string>
+    <string name="watering_soil_tip1">ప్రతి ఉదయం లేదా సాయంత్రం మొక్కలకు నీరు ఇవ్వండి</string>
+    <string name="watering_soil_tip2">మట్టి తరుచూ తేమగా ఉండాలి గానీ నీటిముంపు కాకూడదు</string>
+
+    <string name="sun_nutrition_title">☀️ సూర్యరశ్మి మరియు పోషణ</string>
+    <string name="sun_nutrition_tip1">ప్రతి రోజు 6-8 గంటల సూర్యరశ్మి ఇవ్వండి</string>
+    <string name="sun_nutrition_tip2">ప్రతి 2-4 వారాలకు ఎరువు వినియోగించండి</string>
+
+    <string name="pests_hygiene_title">🐛 కీటకాల నిర్వహణ మరియు శుభ్రత</string>
+    <string name="pests_hygiene_tip1">కీటకాల కోసం మొక్కల ఆకులను క్రమం తప్పకుండా పరిశీలించండి</string>
+    <string name="pests_hygiene_tip2">జ్వర నివారణ కోసం చనిపోయిన ఆకులను తీయండి</string>
+
+    <string name="harvest_storage_title">🌾 కోత మరియు నిల్వ</string>
+    <string name="harvest_storage_tip1">ఫలితమైన సమయం లో పంట కోయండి</string>
+    <string name="harvest_storage_tip2">చల్లని మరియు పొడి ప్రదేశాల్లో నిల్వ చేయండి</string>
+    <!-- Tips Section -->
+    <string name="card_tips_water_soil_title">💧 నీటిపోత మరియు నేల</string>
+    <string name="card_tips_water_soil_tip1">ఉదయం లేదా సాయంత్రం కాలంలో మొక్కలకు నీరు పోయండి</string>
+    <string name="card_tips_water_soil_tip2">నేలను తేమగా ఉంచండి కానీ నీటిమయంగా లేదు</string>
+    <string name="card_tips_sun_nutrition_title">☀️ సూర్యుడు మరియు పోషణ</string>
+    <string name="card_tips_sun_nutrition_tip1">రోజూ 6-8 గంటల సూర్యకాశ్మీర ఇవ్వండి</string>
+    <string name="card_tips_sun_nutrition_tip2">ప్రతి 2-4 వారాలకు ఎరువు ఉపయోగించండి</string>
+    <string name="card_tips_pests_hygiene_title">🐛 తెగులు మరియు పరిశుద్ధత</string>
+    <string name="card_tips_pests_hygiene_tip1">ఆకులపై తెగులను క్రమం గా తనిఖీ చేయండి</string>
+    <string name="card_tips_pests_hygiene_tip2">వ్యాధిని నిరోధించడానికి చచ్చిన ఆకులను తీసివేయండి</string>
+    <string name="card_tips_harvest_storage_title">🌾 పంట తీయడం మరియు నిల్వ చేయడం</string>
+    <string name="card_tips_harvest_storage_tip1">పూర్ణ పక్కముపై పంటను పండించండి</string>
+    <string name="card_tips_harvest_storage_tip2">చల్లటి, ఆరిడ్రంగా ఉన్న చోట నిల్వ చేయండి</string>
+
+    <string name="profile_picture">ప్రోఫైల్ చిత్రం</string>
+    <string name="change_photo">ఫోటో మార్చండి</string>
+    <string name="personal_information">వ్యక్తిగత సమాచారం</string>
+    <string name="security">సెక్యూరిటీ</string>
+    <string name="preferences">ప్రాధాన్యతలు</string>
+    <string name="new_password">కొత్త పాస్‌వర్డ్ (ఐచ్ఛికం)</string>
+    <string name="confirm_password">పాస్‌వర్డ్‌ని నిర్ధారించండి</string>
+    <string name="save_changes">మార్పులను సంరక్ష్కండి</string>
+
+        <!-- About Activity Content -->
+        <string name="about_title">🌿 స్మార్టలీఫ్ - AI-నడిచిన పంట వ్యాధి గుర్తింపు</string>
+        <string name="about_intro">స్మార్టలీఫ్ ఖేతీదారులు మరియు తోటల కోసం ప్రత్యేకంగా రూపొందించిన ఒక ఉచిత మొబైల్ అనువర్తనం. ఇది ఆకు ఫోటో తీసుకుని పంట వ్యాధులను గుర్తించడానికి మీకు సహాయం చేస్తుంది. అధునిక AI ఆధుനిక వాడుకుపై, అనువర్తనం ఫోటో విశ్లేషణ చేస్తుంది మరియు మీ ఇష్ట భాషలో సరళ సూచనలను అందిస్తుంది.</string>
+
+        <string name="about_vision_title">🌟 మా దృష్టి</string>
+        <string name="about_vision_text">కృషి సరళ మరియు స్మార్ట్ కాకుండా. ఆధునిక ఖేతీదారులు వారి పంట ఆరోగ్యం నిర్వహించడానికి మరియు ఆదాయం పెంచుకోవడానికి సహాయం చేయవచ్చు.</string>
+
+        <string name="about_mission_title">🎯 మా లక్ష్యం</string>
+        <string name="about_mission_text">• ఖేతీదారులకు పంట వ్యాధులను త్వరగా గుర్తించడంలో సహాయం చేయడం\n• బహుళ భాషలలో పరిష్కారాలను అందించడం\n• పంట నష్టం నుండి రక్షించడం మరియు ఫలితం పెంచుకోవడం\n• ఆధునిక AI ఆధునిక గ్రామీణ ప్రాంతాలకు సరళ రీతిలో తీసుకురావడం\n• ప్రతి ఖేతీదారు కోసం పంట ఆరోగ్యం పర్యవేక్షణను సులభ చేయడం</string>
+
+        <string name="about_goals_title">🎯 మా లక్ష్యాలు</string>
+        <string name="about_goals_text">• ఖేతీదారులను వారి స్మార్ట్‌ఫోన్‌లను ఉపయోగించి పంట ఆరోగ్యం తనిఖీ చేయడానికి సమర్థ చేయడం\n• 90% కంటే ఎక్కువ ఖచ్చితత్వాన్ని అందించడం\n• పంట వ్యాధులను నిరోధించడానికి స్పష్టమైన దశలను అందించడం\n• బహుళ ప్రాంతీయ భాషలలో సమర్థనను అందించడం\n• AI నమూనాలను నిరంతరం మెరుగుపరచడం</string>
+
+        <string name="about_features_title">✅ స్మార్టలీఫ్ చేయగలిగే చేయుటలు</string>
+        <string name="about_features_text">• తక్షణమే ఆకు ఫోటో నుండి వ్యాధులను గుర్తించడం\n• వివరణాత్మక వ్యాధి సమాచారాన్ని అందించడం\n• సరళ మరియు సాంఘిక ఔషధాలను సూచించడం\n• బహుళ భాషలలో సమర్థనను అందించడం\n• అందరికీ పూర్ణ స్వతంత్ర్య మరియు సరళ\n• ఇంటర్నెట్ లేకుండా పనిచేయడం\n• స్కాన్ చరిత్రను సంరక్షించడం</string>
+
+        <string name="about_why_title">📖 మేము దీనిని ఎందుకు నిర్మించాము</string>
+        <string name="about_why_text">ప్రతి సంవత్సరం అనేక ఖేతీదారులు వారి పంటలను కోల్పోతారు ఎందుకంటే వారు వ్యాధులను త్వరగా గుర్తించలేరు. సంప్రదాయ పద్ధతులలో వివిధ సలహాయిత్వం ఖర్చుచేయి మరియు సమయం విసిరే విధంగా ఉందీ. స్మార్టలీఫ్ త్వరిత, ఖచ్చితమైన మరియు సుగమ గుర్తింపుకు నిర్మించబడింది.</string>
+
+        <string name="about_helps_title">🔹 ఇది ఖేతీదారులకు సహాయం చేస్తుంది</string>
+        <string name="about_helps_text">• వ్యాధులను త్వరగా గుర్తించి పంటలను రక్షించడం\n• గ్రామీణ ప్రాంతాలలో పనిచేయడం\n• స్థానిక భాషలకు సమర్థనను అందించడం\n• ఖేతీదారుల ఆదాయం పెంచుకోవడానికి సహాయం చేయడం\n• ఖర్చైన సలహాయిత్వం ఆధారపడటాన్ని తగ్గించడం\n• 24/7 పర్యవేక్ష సౌకర్యాన్ని అందించడం\n• ఖేతీదారులకు జ్ఞానాన్ని అందించడం</string>
+
+        <string name="about_commitment_title">🌱 మా నిబద్ధత</string>
+        <string name="about_commitment_text">స్మార్టలీఫ్ ఖేతీదారుల సంతృప్తికి నిబద్ధమైనది. మేము నియమిత రీతిలో నమూనాలను అప్‌డేట్ చేస్తాము మరియు ఉపయోగకారుల అభిప్రాయాన్ని వింటాము.</string>
+
+        <string name="about_community_title">💚 మా సమాజంలో చేరండి</string>
+        <string name="about_community_text">స్మార్టలీఫ్ కుటుంబిలో భాగమవండి మరియు కృషిని స్మార్ట్ చేయడానికి సహాయం చేయండి. మీ అభిప్రాయం మాకు మెరుగుపరచడానికి సహాయం చేస్తుంది.</string>
+    <!-- Scan Activity -->
+    <string name="scan_leaf">ఆకును స్కాన్ చేయండి</string>
+    <string name="scan_your_leaf">మీ ఆకును స్కాన్ చేయండి</string>
+    <string name="scan_description">రోగాన్ని గుర్తించడానికి ఫోటో తీయండి లేదా ఎంచుకోండి</string>
+    <string name="choose_scan_method">స్కాన్ పద్ధతిని ఎంచుకోండి</string>
+    <string name="camera">కెమెరా</string>
+    <string name="take_photo">ఫోటో తీయండి</string>
+    <string name="gallery">గ్యాలరీ</string>
+    <string name="choose_image">చిత్రాన్ని ఎంచుకోండి</string>
+    <string name="scanning_tips">స్కానింగ్ చిట్కాలు</string>
+    <string name="tip_good_lighting">స్పష్టమైన చిత్రాల కోసం మంచి లైటింగ్ నిర్ధారించండి</string>
+    <string name="tip_single_leaf">ఫ్రేమ్‌ను నింపే ఒకే ఆకు తీయండి</string>
+    <string name="tip_plain_background">ఉత్తమ ఫలితాల కోసం సాదా నేపథ్యం ఉపయోగించండి</string>
+    <string name="about_smartleaf">స్మార్ట్‌లీఫ్ గురించి</string>
+
+    <string name="camera_permission_denied">కెమెరా అనుమతి నిరాకరించబడింది</string>
+    <string name="gallery_permission_denied">గ్యాలరీ అనుమతి నిరాకరించబడింది</string>
+    <string name="ml_model_loaded">ML మోడల్ విజయవంతంగా లోడ్ చేయబడింది</string>
+    <string name="error_loading_ml_model">ML మోడల్‌ను లోడ్ చేయడంలో లోపం: %s</string>
+    <string name="ml_model_not_initialized">ML మోడల్ ప్రారంభించబడలేదు. దయచేసి యాప్‌ను పునఃప్రారంభించండి.</string>
+    <string name="error_analyzing_image">చిత్రాన్ని విశ్లేషించడంలో లోపం: %s</string>
+    <string name="analyzing_image">చిత్రాన్ని విశ్లేషిస్తోంది...</string>
+</resources>
+
+

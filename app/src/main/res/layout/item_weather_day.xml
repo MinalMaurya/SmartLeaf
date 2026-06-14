@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#EAECF0"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Icon placeholder (you'll replace later) -->
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_weather_fill"
+            android:contentDescription="Weather icon" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 Feb"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#111827"/>
+
+            <TextView
+                android:id="@+id/tv_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Sunny"
+                android:textSize="12sp"
+                android:textColor="#6B7280"/>
+
+            <TextView
+                android:id="@+id/tv_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Rain: 2mm  •  Wind: 14 km/h"
+                android:textSize="12sp"
+                android:textColor="#344054"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18° / 28°"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#111827"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

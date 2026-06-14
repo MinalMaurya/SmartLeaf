@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundleaf"
+    android:padding="0dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- AppBar style header -->
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="30sp"
+            android:textColor="#013220"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="#33573020"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvAppSettingsSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage your preferences"
+            android:textSize="15sp"
+            android:textColor="#344433"
+            android:fontFamily="serif"
+            android:paddingBottom="12dp" />
+
+        <!-- Profile Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="18dp"
+            app:cardBackgroundColor="#FEFEFE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:id="@+id/tvProfileInfoSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="#013220"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:paddingBottom="10dp"/>
+
+                <!-- Name + Email + Phone fields, with refined margins and icons for UX -->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        android:layout_marginEnd="8dp"
+                        app:tint="#AACCBB"/>
+                    <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Name"
+                        android:inputType="textPersonName"
+                        android:padding="10dp"
+                        android:backgroundTint="#AACCBB"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="8dp" />
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@android:drawable/ic_dialog_email"
+                        android:layout_marginEnd="8dp"
+                        app:tint="#AACCBB"/>
+                    <EditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:backgroundTint="#AACCBB"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="8dp" />
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@android:drawable/ic_menu_call"
+                        android:layout_marginEnd="8dp"
+                        app:tint="#AACCBB"/>
+                    <EditText
+                        android:id="@+id/editPhone"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Phone"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:backgroundTint="#AACCBB"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Language Selection Card (visual prominence, with icon) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#FEFEFE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    android:layout_marginEnd="10dp"
+                    app:tint="#AACCBB"/>
+
+                <TextView
+                    android:id="@+id/labelLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:textStyle="bold"
+                    android:textColor="#344433"
+                    android:textSize="16sp"
+                    android:fontFamily="serif"
+                    android:layout_marginEnd="12dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerLanguage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"
+                    android:backgroundTint="#AACCBB"
+                    android:popupBackground="#FFFFFF" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Notification Switch Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#FEFEFE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@android:drawable/ic_dialog_info"
+                    app:tint="#AACCBB"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/tvNotificationsTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Enable Notifications"
+                    android:textColor="#344433"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+
+                <Switch
+                    android:id="@+id/switchNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Privacy Policy Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#FEFEFE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    app:tint="#AACCBB"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/tvPrivacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Privacy Policy"
+                    android:textColor="#344433"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Save Button - Floating modern style -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:elevation="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/classic_button_bg" />
+
+        <!-- Secondary Feedback Button (subdued color) -->
+        <Button
+            android:id="@+id/btnFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Feedback"
+            android:backgroundTint="#99CFE6"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:layout_marginBottom="12dp" />
+        <RatingBar
+            android:id="@+id/ratingBarFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/green"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:gravity="center_vertical">
+
+    <!-- ✅ App Logo -->
+    <ImageView
+        android:id="@+id/iv_app_logo"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside" />
+
+    <!-- ✅ SmartLeaf Title -->
+    <TextView
+        android:id="@+id/tv_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_app_logo"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        android:text="SmartLeaf"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

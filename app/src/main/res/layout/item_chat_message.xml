@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <!-- User bubble (right) -->
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/classic_button_bg"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- Bot bubble (left) -->
+    <LinearLayout
+        android:id="@+id/botContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/edittext_bg"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/btnSpeak"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_speaker"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/tvBot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#2E7D32"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

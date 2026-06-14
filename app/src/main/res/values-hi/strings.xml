@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">SmartLeaf</string>
+
+    <!-- General -->
+    <string name="language">भाषा</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="scan_now">अभी स्कैन करें</string>
+    <string name="view_categories">श्रेणियाँ देखें</string>
+    <string name="more_options">अधिक विकल्प</string>
+
+    <!-- Messages and Notifications -->
+    <string name="language_changed">भाषा बदली गई</string>
+    <string name="save">सहेजें</string>
+    <string name="select_language">भाषा चुनें</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="enable_notifications">सूचनाएं सक्षम करें</string>
+    <string name="view_privacy_policy">गोपनीयता नीति देखें</string>
+    <string name="profile_saved">प्रोफ़ाइल सफलतापूर्वक सहेजी गई</string>
+    <string name="my_profile">मेरी प्रोफ़ाइल</string>
+    <string name="account_details">खाता विवरण</string>
+    <string name="profile_background">प्रोफ़ाइल पृष्ठभूमि</string>
+    <string name="user_avatar">उपयोगकर्ता अवतार</string>
+    <string name="name_icon">नाम आइकन</string>
+    <string name="email_icon">ईमेल आइकन</string>
+    <string name="phone_icon">फ़ोन आइकन</string>
+    <string name="language_icon">भाषा आइकन</string>
+    <string name="name_label">नाम</string>
+    <string name="email_label">ईमेल</string>
+    <string name="phone_label">फ़ोन</string>
+    <string name="preferred_language">पसंदीदा भाषा</string>
+    <string name="loading">लोड हो रहा है...</string>
+    <string name="edit_profile">प्रोफ़ाइल संपादित करें</string>
+    <string name="log_out">लॉग आउट</string>
+
+    <!-- About Activity -->
+    <string name="background_image">पृष्ठभूमि छवि</string>
+    <string name="app_logo">ऐप लोगो</string>
+    <string name="app_name_smartleaf">SmartLeaf</string>
+    <string name="tagline">AI-संचालित फसल रोग पहचान</string>
+    <string name="about_content_loading">सामग्री लोड हो रही है...</string>
+    <string name="developers_icon">डेवलपर्स आइकन</string>
+    <string name="developed_by">द्वारा विकसित</string>
+    <string name="developer_icon">डेवलपर आइकन</string>
+    <string name="developer_1">प्राची त्रिपाठी</string>
+    <string name="developer_2">मिनल मौर्या</string>
+    <string name="developer_3">सिद्धि गायकर</string>
+    <string name="version_icon">संस्करण आइकन</string>
+    <string name="version_1_0">संस्करण 1.0</string>
+    <string name="last_updated">अक्टूबर 2025</string>
+
+    <!-- Category Activity -->
+    <string name="crop_categories">फसल श्रेणियाँ</string>
+    <string name="explore_crops">विभिन्न फसलों के बारे में जानें</string>
+    <string name="search_categories">श्रेणियाँ खोजें...</string>
+    <string name="total_categories">8 श्रेणियाँ</string>
+    <string name="total_categories_format">%d श्रेणियाँ</string>
+    <string name="no_results">कोई परिणाम नहीं</string>
+    <string name="no_categories_found">कोई श्रेणी नहीं मिली</string>
+    <string name="try_different_search">दूसरा खोज शब्द आज़माएँ</string>
+
+    <!-- Category Detail -->
+    <string name="category_details">श्रेणी विवरण</string>
+    <string name="category_image">श्रेणी छवि</string>
+    <string name="about_crop">इस फसल के बारे में</string>
+    <string name="health_comparison">स्वास्थ्य तुलना</string>
+    <string name="healthy">स्वस्थ</string>
+    <string name="diseased">रोगग्रस्त</string>
+    <string name="healthy_crop">स्वस्थ फसल</string>
+    <string name="diseased_crop">रोगग्रस्त फसल</string>
+    <string name="healthy_image">स्वस्थ छवि</string>
+    <string name="diseased_image">रोगग्रस्त छवि</string>
+    <string name="disease_information">रोग जानकारी</string>
+    <string name="info_icon">जानकारी आइकन</string>
+    <string name="compare_icon">तुलना आइकन</string>
+    <string name="warning_icon">चेतावनी आइकन</string>
+
+    <!-- Diagnose Activity -->
+    <string name="ai_diagnosis">AI निदान</string>
+    <string name="upload_leaf_image">प्रभावित पत्ती की स्पष्ट छवि अपलोड करें</string>
+    <string name="select_leaf_image">पत्ती छवि चुनें</string>
+    <string name="leaf_preview">पत्ती छवि पूर्वावलोकन</string>
+    <string name="upload_placeholder">अपलोड प्लेसहोल्डर</string>
+    <string name="no_image_selected">कोई छवि चयनित नहीं\nछवि चुनने के लिए नीचे बटन दबाएं</string>
+    <string name="analyzing">विश्लेषण हो रहा है...</string>
+    <string name="diagnose_icon">निदान आइकन</string>
+    <string name="result_icon">परिणाम आइकन</string>
+    <string name="details_icon">विवरण आइकन</string>
+    <string name="alternatives_icon">विकल्प आइकन</string>
+
+    <!-- Result Sections -->
+    <string name="diagnosis_result">निदान परिणाम</string>
+    <string name="detailed_analysis">विस्तृत विश्लेषण</string>
+    <string name="alternative_diagnoses">वैकल्पिक निदान</string>
+    <string name="awaiting_results">विश्लेषण के बाद परिणाम यहां दिखाई देंगे</string>
+    <string name="awaiting_details">विस्तृत लक्षण यहां सूचीबद्ध होंगे</string>
+    <string name="awaiting_alternatives">वैकल्पिक निदान यहां दिखाई देंगे</string>
+    <string name="confidence_format">विश्वास: %s%%</string>
+    <string name="detected_format">पहचाना गया: %s</string>
+
+    <!-- Error Messages -->
+    <string name="failed_load_image">छवि लोड विफल</string>
+    <string name="error_loading_image">छवि लोड करने में त्रुटि: %s</string>
+    <string name="diagnosis_error">निदान त्रुटि: %s</string>
+    <string name="please_try_again">कृपया दूसरी छवि चुनें</string>
+    <string name="no_details_available">विस्तृत विश्लेषण उपलब्ध नहीं</string>
+    <string name="no_alternatives_available">वैकल्पिक निदान उपलब्ध नहीं</string>
+
+    <!-- History Activity -->
+    <string name="search_history">खोज इतिहास</string>
+    <string name="your_recent_diagnoses">आपके हाल के पौधे निदान</string>
+    <string name="history_icon">इतिहास आइकन</string>
+    <string name="recent_items">हाल की वस्तुएं</string>
+    <string name="recent_items_format">%d हाल की वस्तुएं</string>
+    <string name="clear_all">सभी साफ़ करें</string>
+    <string name="no_history">कोई इतिहास नहीं</string>
+    <string name="no_history_yet">अभी तक कोई इतिहास नहीं</string>
+    <string name="start_diagnosing">इतिहास देखने के लिए पौधों का निदान शुरू करें</string>
+
+    <!-- History Item -->
+    <string name="history_item_image">इतिहास आइटम छवि</string>
+    <string name="time_icon">समय आइकन</string>
+    <string name="just_now">अभी</string>
+    <string name="view_details">विवरण देखें</string>
+    <string name="delete_item">आइटम हटाएं</string>
+
+    <!-- Dialogs -->
+    <string name="delete_item_title">आइटम हटाएं?</string>
+    <string name="delete_item_message">क्या आप वाकई इस आइटम को इतिहास से हटाना चाहते हैं?</string>
+    <string name="clear_all_title">सभी इतिहास साफ़ करें?</string>
+    <string name="clear_all_message">क्या आप वाकई सभी इतिहास साफ़ करना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>
+    <string name="delete">हटाएं</string>
+    <string name="cancel">रद्द करें</string>
+
+    <!-- Login Activity -->
+    <string name="welcome_back">वापस स्वागत है</string>
+    <string name="login_to_continue">SmartLeaf में जारी रखने के लिए लॉगिन करें</string>
+    <string name="email_address">ईमेल पता</string>
+    <string name="password">पासवर्ड</string>
+    <string name="forgot_password">पासवर्ड भूल गए?</string>
+    <string name="login">लॉगिन</string>
+    <string name="dont_have_account">खाता नहीं है?</string>
+    <string name="sign_up">साइन अप करें</string>
+    <string name="or_continue_as">या जारी रखें</string>
+    <string name="continue_as_guest">अतिथि के रूप में जारी रखें</string>
+
+    <!-- Validation Messages -->
+    <string name="email_required">ईमेल आवश्यक है</string>
+    <string name="password_required">पासवर्ड आवश्यक है</string>
+    <string name="invalid_email">अमान्य ईमेल प्रारूप</string>
+    <string name="password_too_short">पासवर्ड कम से कम 6 वर्ण का होना चाहिए</string>
+
+    <!-- Success/Error Messages -->
+    <string name="login_successful">लॉगिन सफल!</string>
+    <string name="invalid_credentials">अमान्य ईमेल या पासवर्ड</string>
+    <string name="login_failed">लॉगिन विफल: %s</string>
+    <string name="network_error">इंटरनेट कनेक्शन नहीं है</string>
+    <string name="connection_timeout">कनेक्शन समय समाप्त। कृपया पुनः प्रयास करें</string>
+    <string name="logged_in_as_guest">अतिथि के रूप में लॉग इन</string>
+    <string name="forgot_password_coming_soon">पासवर्ड भूलने की सुविधा जल्द आ रही है</string>
+
+    <!-- Home Activity -->
+    <string name="welcome_home">SmartLeaf में आपका स्वागत है</string>
+    <string name="app_title">SmartLeaf</string>
+    <string name="quick_scan">त्वरित स्कैन</string>
+
+    <!-- Tips Section -->
+    <string name="watering_soil_title">💧 पानी और मिट्टी</string>
+    <string name="watering_soil_tip1">सुबह या शाम को पौधों को पानी दें</string>
+    <string name="watering_soil_tip2">मिट्टी को नम रखें लेकिन जलभराव न करें</string>
+
+    <string name="sun_nutrition_title">☀️ धूप और पोषण</string>
+    <string name="sun_nutrition_tip1">रोजाना 6-8 घंटे धूप प्रदान करें</string>
+    <string name="sun_nutrition_tip2">हर 2-4 सप्ताह में उर्वरक का उपयोग करें</string>
+
+    <string name="pests_hygiene_title">🐛 कीट और स्वच्छता</string>
+    <string name="pests_hygiene_tip1">कीटों के लिए नियमित रूप से पत्तियों का निरीक्षण करें</string>
+    <string name="pests_hygiene_tip2">बीमारी को रोकने के लिए मृत पत्तियों को हटाएं</string>
+
+    <string name="harvest_storage_title">🌾 कटाई और भंडारण</string>
+    <string name="harvest_storage_tip1">चरम परिपक्वता पर फसल काटें</string>
+    <string name="harvest_storage_tip2">ठंडी, सूखी जगहों में स्टोर करें</string>
+
+    <!-- Result Activity -->
+    <string name="scan_again">फिर से स्कैन करें</string>
+    <string name="share">साझा करें</string>
+    <string name="what_it_means">इसका क्या मतलब है</string>
+    <string name="suggested_remedies">सुझाए गए उपाय</string>
+
+    <!-- SignUp Activity -->
+    <string name="create_account">खाता बनाएं</string>
+    <string name="sign_up_to_get_started">शुरू करने के लिए साइन अप करें</string>
+    <string name="full_name">पूरा नाम</string>
+    <string name="phone_number">फ़ोन नंबर</string>
+    <string name="already_have_account">पहले से खाता है?</string>
+    <string name="log_in">लॉग इन करें</string>
+
+    <string name="feedback"> प्रतिक्रिया </string>
+
+
+    <string name="card_tips_water_soil_title">💧 पानी देना और मिट्टी</string>
+    <string name="card_tips_water_soil_tip1">सुबह या शाम को पौधों को पानी दें</string>
+    <string name="card_tips_water_soil_tip2">मिट्टी को नम रखें लेकिन पानी न भरा हो</string>
+    <string name="card_tips_sun_nutrition_title">☀️ सूर्य और पोषण</string>
+    <string name="card_tips_sun_nutrition_tip1">प्रतिदिन 6-8 घंटे धूप प्रदान करें</string>
+    <string name="card_tips_sun_nutrition_tip2">हर 2-4 सप्ताह में खाद का उपयोग करें</string>
+    <string name="card_tips_pests_hygiene_title">🐛 कीट और स्वच्छता</string>
+    <string name="card_tips_pests_hygiene_tip1">पत्तियों पर कीटों की नियमित जांच करें</string>
+    <string name="card_tips_pests_hygiene_tip2">बीमारी रोकने के लिए मृत पत्तियां हटाएं</string>
+    <string name="card_tips_harvest_storage_title">🌾 फसल और भंडारण</string>
+    <string name="card_tips_harvest_storage_tip1">पूर्ण पकने पर फसल काटें</string>
+    <string name="card_tips_harvest_storage_tip2">ठंडी और सूखी जगह पर रखें</string>
+
+    <string name="profile_picture">प्रोफ़ाइल चित्र</string>
+    <string name="change_photo">फोटो बदलें</string>
+    <string name="personal_information">व्यक्तिगत जानकारी</string>
+    <string name="security">सुरक्षा</string>
+    <string name="preferences">वरीयताएं</string>
+    <string name="new_password">नया पासवर्ड (वैकल्पिक)</string>
+    <string name="confirm_password">पासवर्ड की पुष्टि करें</string>
+    <string name="save_changes">परिवर्तन सहेजें</string>
+
+
+        <!-- About Activity Content -->
+        <string name="about_title">🌿 स्मार्टलीफ - एआई-संचालित फसल रोग पहचान</string>
+        <string name="about_intro">स्मार्टलीफ विशेष रूप से किसानों और माली के लिए डिज़ाइन किया गया एक मुक्त मोबाइल एप्लिकेशन है। यह आपको पत्ती की तस्वीर लेकर फसल के रोगों की पहचान करने में मदद करता है। उन्नत एआई तकनीक का उपयोग करके, ऐप फ़ोटो का विश्लेषण करता है और आपकी पसंदीदा भाषा में आसान सुझाव प्रदान करता है।</string>
+
+        <string name="about_vision_title">🌟 हमारा दृष्टिकोण</string>
+        <string name="about_vision_text">कृषि को आसान और स्मार्ट बनाना। हमें विश्वास है कि तकनीक किसानों को उनकी फसल स्वस्थ रखने और आय बढ़ाने में मदद कर सकती है।</string>
+
+        <string name="about_mission_title">🎯 हमारा मिशन</string>
+        <string name="about_mission_text">• किसानों को फसल के रोगों की जल्दी पहचान करने में मदद करना\n• कई भाषाओं में समाधान प्रदान करना\n• फसल को नुकसान से बचाना और उपज बढ़ाना\n• आधुनिक एआई तकनीक को ग्रामीण क्षेत्रों में सरल तरीके से लाना\n• हर किसान के लिए फसल स्वास्थ्य निगरानी सुलभ बनाना</string>
+
+        <string name="about_goals_title">🎯 हमारे लक्ष्य</string>
+        <string name="about_goals_text">• किसानों को अपने स्मार्टफोन से फसल की सेहत जांचने में सक्षम बनाना\n• 90% से अधिक सटीकता प्रदान करना\n• फसल के रोगों को रोकने के स्पष्ट तरीके बताना\n• कई क्षेत्रीय भाषाओं में समर्थन देना\n• एआई मॉडल को लगातार सुधारना</string>
+
+        <string name="about_features_title">✅ स्मार्टलीफ क्या कर सकता है</string>
+        <string name="about_features_text">• तुरंत पत्ती की फोटो से रोग की पहचान करना\n• विस्तृत रोग जानकारी प्रदान करना\n• सरल और सस्ते उपाय बताना\n• कई भाषाओं में समर्थन देना\n• सभी के लिए बिल्कुल मुक्त और आसान\n• इंटरनेट के बिना काम करना\n• स्कैन का रिकॉर्ड रखना</string>
+
+        <string name="about_why_title">📖 हमने यह क्यों बनाया</string>
+        <string name="about_why_text">हर साल कई किसान अपनी फसल खो देते हैं क्योंकि वे रोगों की जल्दी पहचान नहीं कर पाते। पारंपरिक तरीकों में विशेषज्ञ की सलाह महंगी और समय लेने वाली होती है। स्मार्टलीफ को जल्दी, सटीक और सुलभ पहचान के लिए बनाया गया है।</string>
+
+        <string name="about_helps_title">🔹 यह किसानों की कैसे मदद करता है</string>
+        <string name="about_helps_text">• रोगों की जल्दी पहचान करके फसल बचाता है\n• ग्रामीण इलाकों में काम करता है\n• स्थानीय भाषाओं का समर्थन करता है\n• किसानों की आय बढ़ाने में मदद करता है\n• महंगे सलाहकारों पर निर्भरता कम करता है\n• 24/7 निगरानी की सुविधा देता है\n• किसानों को ज्ञान प्रदान करता है</string>
+
+        <string name="about_commitment_title">🌱 हमारी प्रतिबद्धता</string>
+        <string name="about_commitment_text">स्मार्टलीफ किसानों की संतुष्टि के लिए प्रतिबद्ध है। हम नियमित रूप से मॉडल को अपडेट करते हैं और उपयोगकर्ताओं की प्रतिक्रिया सुनते हैं।</string>
+
+        <string name="about_community_title">💚 हमारे परिवार में शामिल हों</string>
+        <string name="about_community_text">स्मार्टलीफ परिवार का हिस्सा बनें और कृषि को स्मार्ट बनाने में मदद करें। आपकी प्रतिक्रिया हमें बेहतर बनाने में मदद करती है।</string>
+
+    <!-- Scan Activity (Hindi) -->
+    <string name="scan_leaf">पत्ते को स्कैन करें</string>
+    <string name="scan_your_leaf">अपना पत्ता स्कैन करें</string>
+    <string name="scan_description">रोग की पहचान के लिए छवि लें या चुनें</string>
+    <string name="choose_scan_method">स्कैन करने की विधि चुनें</string>
+    <string name="camera">कैमरा</string>
+    <string name="take_photo">फोटो लें</string>
+    <string name="gallery">गैलरी</string>
+    <string name="choose_image">छवि चुनें</string>
+    <string name="scanning_tips">स्कैनिंग सुझाव</string>
+    <string name="tip_good_lighting">स्पष्ट छवि के लिए अच्छी लाइटिंग सुनिश्चित करें</string>
+    <string name="tip_single_leaf">एकल पत्ता कैप्चर करें जो फ्रेम भरता हो</string>
+    <string name="tip_plain_background">बेहतर परिणाम के लिए सादा पृष्ठभूमि रखें</string>
+    <string name="about_smartleaf">स्मार्टलीफ के बारे में</string>
+
+    <!-- Scan Activity Messages (Hindi) -->
+    <string name="camera_permission_denied">कैमरा अनुमति अस्वीकृत</string>
+    <string name="gallery_permission_denied">गैलरी अनुमति अस्वीकृत</string>
+    <string name="ml_model_loaded">एमएल मॉडल सफलतापूर्वक लोड हुआ</string>
+    <string name="error_loading_ml_model">एमएल मॉडल लोड करने में त्रुटि: %s</string>
+    <string name="ml_model_not_initialized">एमएल मॉडल प्रारंभ नहीं हुआ। कृपया ऐप फिर से शुरू करें।</string>
+    <string name="error_analyzing_image">छवि विश्लेषण में त्रुटि: %s</string>
+    <string name="analyzing_image">छवि विश्लेषण हो रहा है...</string>
+
+</resources>

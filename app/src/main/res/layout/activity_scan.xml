@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".ui.activities.ScanActivity">
+
+    <!-- App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#4CAF50"
+            app:title="Scan Leaf"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@android:color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Background Pattern -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/backgroundleaf"
+        android:scaleType="centerCrop"
+        android:alpha="0.08"
+        android:contentDescription="Background Pattern" />
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!-- Hero Card with Scan Icon -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvHero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="2dp"
+                app:strokeColor="#4CAF50"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="32dp">
+
+                    <!-- Scan Icon -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvScanIcon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#E8F5E9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_scan"
+                            android:scaleType="centerInside"
+                            app:tint="#4CAF50"
+                            android:contentDescription="Scan Icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Title -->
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scan Your Leaf"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32"
+                        android:fontFamily="sans-serif-medium"
+                        app:layout_constraintTop_toBottomOf="@id/cvScanIcon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="16dp" />
+
+                    <!-- Subtitle -->
+                    <TextView
+                        android:id="@+id/tvSubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Capture or select an image to identify plant diseases instantly"
+                        android:textSize="13sp"
+                        android:textColor="#757575"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="6dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section Title -->
+            <TextView
+                android:id="@+id/tvChooseOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Scan Method"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@id/cvHero"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp" />
+
+            <!-- Camera Option Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCamera"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/tvChooseOption"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardStorage"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <!-- Camera Icon Circle -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvCameraIcon"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:cardCornerRadius="28dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="#E8F5E9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_camera"
+                            app:tint="#4CAF50"
+                            android:contentDescription="Camera Icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Camera Label -->
+                    <TextView
+                        android:id="@+id/tvCameraLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32"
+                        android:fontFamily="sans-serif-medium"
+                        app:layout_constraintTop_toBottomOf="@id/cvCameraIcon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="12dp" />
+
+                    <!-- Camera Description -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Take photo"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvCameraLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Gallery Option Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardStorage"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/tvChooseOption"
+                app:layout_constraintStart_toEndOf="@id/cardCamera"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <!-- Gallery Icon Circle -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvGalleryIcon"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:cardCornerRadius="28dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="#E8F5E9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_image"
+                            app:tint="#4CAF50"
+                            android:contentDescription="Gallery Icon" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Gallery Label -->
+                    <TextView
+                        android:id="@+id/tvGalleryLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gallery"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32"
+                        android:fontFamily="sans-serif-medium"
+                        app:layout_constraintTop_toBottomOf="@id/cvGalleryIcon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="12dp" />
+
+                    <!-- Gallery Description -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Choose image"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvGalleryLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvTips"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFF3E0"
+                app:layout_constraintTop_toBottomOf="@id/cardCamera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Tips Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_info"
+                            app:tint="#FF9800"
+                            android:contentDescription="Tips Icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scanning Tips"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#E65100"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                    <!-- Tip 1 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Ensure good lighting for clear images"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Tip 2 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Capture single leaf that fills the frame"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Tip 3 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Use plain background for best results"
+                        android:textSize="12sp"
+                        android:textColor="#424242" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- About Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cardAbout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="About SmartLeaf"
+                android:textColor="#4CAF50"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="1dp"
+                app:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_info"
+                app:iconGravity="textStart"
+                app:iconTint="#4CAF50"
+                app:layout_constraintTop_toBottomOf="@id/cvTips"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Loading Overlay -->
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ProgressBar
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:indeterminateTint="#4CAF50" />
+
+            <TextView
+                android:id="@+id/tvLoadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analyzing leaf..."
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

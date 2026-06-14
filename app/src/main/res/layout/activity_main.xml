@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA"
+    tools:context=".ui.activities.MainActivity"
+    tools:ignore="HardcodedText,ImageContrastCheck,TextContrastCheck">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        app:elevation="4dp"
+        app:navigationIcon="@drawable/logo_small"
+        app:navigationIconTint="@null"
+        android:contentInsetStartWithNavigation="0dp"
+        app:title="SmartLeaf"
+        app:titleCentered="false"
+        app:titleTextColor="@android:color/white"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"/>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingTop="?attr/actionBarSize"
+        android:paddingBottom="110dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Body padding -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <!-- ✅ CHATBOT HERO CARD -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_ask_chatbot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="6dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#E8F5E9"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:strokeColor="#E6E6E6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_chat_icon"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_chat"
+                                android:contentDescription="Chat"
+                                android:layout_marginEnd="2dp"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_chatbot_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ask SmartLeaf"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#111827"/>
+
+                                <TextView
+                                    android:id="@+id/tv_chatbot_subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Get instant answers for crop care, disease and remedies"
+                                    android:textSize="13sp"
+                                    android:textColor="#6B7280"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/ic_arrow_right"
+                                app:tint="#9CA3AF"
+                                android:contentDescription="Open"/>
+                        </LinearLayout>
+
+                        <!-- CTA row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="#F3F4F6">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:src="@drawable/ic_mic"
+                                        app:tint="#374151"/>
+
+                                    <!-- ✅ ADDED ID -->
+                                    <TextView
+                                        android:id="@+id/tv_chatbot_voice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="Voice"
+                                        android:textStyle="bold"
+                                        android:textSize="12sp"
+                                        android:textColor="#374151"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <Space
+                                android:layout_width="10dp"
+                                android:layout_height="1dp"/>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="#F3F4F6">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:src="@drawable/ic_speaker"
+                                        app:tint="#374151"/>
+
+                                    <!-- ✅ ADDED ID -->
+                                    <TextView
+                                        android:id="@+id/tv_chatbot_speaker"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="Speaker"
+                                        android:textStyle="bold"
+                                        android:textSize="12sp"
+                                        android:textColor="#374151"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ✅ WEATHER CARD -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#EAECF0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_weather_icon"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:src="@drawable/ic_weather_fill"
+                                android:contentDescription="Weather"
+                                android:layout_marginEnd="2dp"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_weather_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Weather near you"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:textColor="#101828"/>
+
+                                <TextView
+                                    android:id="@+id/tv_weather_location"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Detecting location…"
+                                    android:textSize="13sp"
+                                    android:textColor="#667085"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_weather_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--°C"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:textColor="#101828"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_weather_condition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="—"
+                            android:textSize="13sp"
+                            android:textColor="#344054"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_weather_humidity"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Humidity: --%"
+                                android:textSize="12sp"
+                                android:textColor="#667085"/>
+
+                            <TextView
+                                android:id="@+id/tv_weather_wind"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="Wind: -- km/h"
+                                android:textSize="12sp"
+                                android:textColor="#667085"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_weather_updated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Updated: --"
+                            android:textSize="11sp"
+                            android:textColor="#98A2B3"/>
+
+                        <TextView
+                            android:id="@+id/tv_weather_permission_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Enable location to show weather."
+                            android:textSize="12sp"
+                            android:textColor="#B42318"
+                            android:visibility="gone"
+                            android:foreground="?attr/selectableItemBackground"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Section title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Today’s Tips"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#111827"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Simple steps to keep your crops healthy"
+                    android:textSize="13sp"
+                    android:textColor="#6B7280"/>
+
+                <!-- Watering & Soil -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_tips_water_soil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E6E6E6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/card_tips_water_soil_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Watering and Soil"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#111827"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_leaf_logo"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_water_soil_tip1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Water early morning to reduce evaporation and stress."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_categories"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_water_soil_tip2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Mulch 5–7 cm to keep soil moist and block weeds."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Sun & Nutrition -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_tips_sun_nutrition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E6E6E6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/card_tips_sun_nutrition_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sun and Nutrition"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#111827"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_home"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_sun_nutrition_tip1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Most veggies need 6–8 hours of sun; shade tender greens in peak heat."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_profile"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_sun_nutrition_tip2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Feed lightly every 2–3 weeks; over-fertilizing burns roots."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Pests & Hygiene -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_tips_pests_hygiene"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E6E6E6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/card_tips_pests_hygiene_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pests and Hygiene"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#111827"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_scan"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_pests_hygiene_tip1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Scout leaves weekly; remove heavily infected parts immediately."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_leaf_logo"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_pests_hygiene_tip2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Rotate crops each season to break pest and disease cycles."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Harvest & Storage -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_tips_harvest_storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E6E6E6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/card_tips_harvest_storage_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Harvest and Storage"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#111827"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_categories"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_harvest_storage_tip1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Harvest crops in the early morning for best flavor and shelf life."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_profile"
+                                app:tint="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/card_tips_harvest_storage_tip2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Store in cool, dry places; avoid stacking heavy crates on top."
+                                android:textColor="#374151"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        app:itemIconTint="@color/green"
+        app:itemTextColor="@color/green"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_quick_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bottom_navigation"
+        app:layout_anchorGravity="top|end"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="78dp"
+        android:contentDescription="Quick Scan"
+        android:src="@drawable/ic_scan"
+        app:backgroundTint="@color/amber" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

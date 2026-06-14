@@ -1,0 +1,8 @@
+bitter_gourd
+cabbage
+capsicum
+corriander
+curry_leafs
+healthy
+potato
+tomato

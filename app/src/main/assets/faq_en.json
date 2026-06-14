@@ -1,0 +1,50 @@
+[
+  {
+    "id": "yellow_leaves",
+    "question": "Leaves are turning yellow. What should I do?",
+    "answer": "Yellow leaves can be due to too much water, poor drainage, or lack of nutrients. Water only when soil is slightly dry, improve drainage, remove very yellow leaves, and add compost. If spots appear, consult a local agriculture expert.",
+    "tags": ["yellow", "nutrient", "overwatering", "drainage"]
+  },
+  {
+    "id": "white_powder",
+    "question": "White powder on leaves. What is it?",
+    "answer": "White powder is often a fungal issue. Remove infected leaves, increase airflow, avoid wetting leaves, and keep spacing between plants. Do not spray random chemicals. Contact a local agriculture officer for exact treatment.",
+    "tags": ["white", "powder", "fungus", "mildew"]
+  },
+  {
+    "id": "brown_spots",
+    "question": "Brown or black spots on leaves. What does it mean?",
+    "answer": "Spots can happen due to disease, pests, or water stress. Remove badly infected leaves, avoid watering on leaves, and keep the area clean. If it spreads fast, get help from a local expert.",
+    "tags": ["spots", "brown", "black", "disease"]
+  },
+  {
+    "id": "holes_in_leaves",
+    "question": "Holes in leaves. What should I check?",
+    "answer": "Holes are often due to insects. Check the underside of leaves, remove visible pests, keep weeds away, and use safe organic practices common in your region. If severe, consult an expert.",
+    "tags": ["holes", "insects", "pests", "caterpillar"]
+  },
+  {
+    "id": "leaf_curl",
+    "question": "Leaves are curling. Why is it happening?",
+    "answer": "Leaf curl can happen due to heat stress, pests, or irregular watering. Water regularly (not too much), provide shade if very hot, and inspect for pests. Consult an expert if curl increases.",
+    "tags": ["curl", "heat", "stress", "watering"]
+  },
+  {
+    "id": "best_watering",
+    "question": "What is the best time to water plants?",
+    "answer": "Early morning is best. Water near the soil, not on leaves. This reduces disease risk and saves water.",
+    "tags": ["watering", "morning", "soil", "care"]
+  },
+  {
+    "id": "prevention",
+    "question": "How can I prevent plant diseases in general?",
+    "answer": "Use clean tools, remove damaged leaves, keep good spacing, avoid wet leaves, rotate crops, and keep the field clean. Early action helps a lot.",
+    "tags": ["prevent", "disease", "clean", "rotation"]
+  },
+  {
+    "id": "when_to_seek_help",
+    "question": "When should I contact an agriculture expert?",
+    "answer": "If the problem spreads quickly, the plant is wilting, or many leaves are damaged, contact a local agriculture officer or expert for correct treatment.",
+    "tags": ["expert", "help", "spread", "wilt"]
+  }
+]

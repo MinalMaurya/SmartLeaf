@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CardTitleHome">
+        <item name="android:textColor">#2E7D32</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+    <style name="CardTipHome">
+        <item name="android:textColor">#424242</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+</resources>
