@@ -57,6 +57,17 @@ Currently available in:
 - Material Design Components
 
 ---
+ ### 🚀 Installation
+Clone the repository:
+git clone https://github.com/your-username/SmartLeaf.git
+Open the project in Android Studio.
+Create a local.properties file and add:
+GEMINI_API_KEY=YOUR_API_KEY
+Sync Gradle and build the project.
+Run the application on an Android device or emulator.
+
+---
+
 
 ## 🎯 Project Objective
 
